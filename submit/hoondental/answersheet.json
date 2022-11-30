@@ -1,0 +1,118 @@
+{
+    "1": {
+        "answer": "14",
+        "equation": "print(9 + 5)"
+    },
+    "2": {
+        "answer": "10000",
+        "equation": "sum = 0\nfor i in range(1, 200 + 1):\n    if i % 2 == 1:\n        sum += i\nprint(sum)"
+    },
+    "3": {
+        "answer": "600",
+        "equation": "x = 100\ny = 6\nprint(x * y)"
+    },
+    "4": {
+        "answer": "79",
+        "equation": "N = 30\nn = 3\nscores = [94, 82, 88]\nmean = 78\ntotal = (N - n) * mean + sum(scores)\nnew_mean = total / 30\nif new_mean / 1 == new_mean // 1:\n    print(int(new_mean))\nelse:\n    print('%.2f'%new_mean)"
+    },
+    "5": {
+        "answer": "8",
+        "equation": "print(20 - 11 - 1)"
+    },
+    "6": {
+        "answer": "3",
+        "equation": "print(int((2 + 4) / 2))"
+    },
+    "7": {
+        "answer": "5",
+        "equation": "print(9 - 5 + 1)"
+    },
+    "8": {
+        "answer": "6",
+        "equation": "n1 = 7\nn2 = 2\nn3 = 1\nn = n1 - (n2 * n3)\ncount_n = 1\nfor i in range(1, n + n2):\n    count_n *= i\ncount_d1 = 1\nfor i in range(1, n2):\n    count_d1 *= i\ncount_d2 = 1\nfor i in range(1, n + 1):\n    count_d2 *= i\ncount = count_n / (count_d1 * count_d2)\nprint(int(count))"
+    },
+    "9": {
+        "answer": "24",
+        "equation": "numbers = [7, 2, 5, 9]\nn = len(numbers)\ncount = 1\nif 0 in numbers:\n    for i in range(n):\n        if i == 0:\n            count *= n - 1\n        else:\n            count *= n - i\nelse:\n    for i in range(n):\n        count *= n - i\nprint(count)"
+    },
+    "10": {
+        "answer": "6",
+        "equation": "n = 4\nm = 2\ncount = 1\nfor i in range(m):\n    count *= (n - i) / (i + 1)\nprint(int(count))"
+    },
+    "11": {
+        "answer": "45",
+        "equation": "numbers = [53, 98, 69, 84]\nprint(max(numbers) - min(numbers))"
+    },
+    "12": {
+        "answer": "0.30",
+        "equation": "n = 1\ndelta = 2.7\noriginal = delta / (10**n - 1)\nprint('%.2f'%original)"
+    },
+    "13": {
+        "answer": "50",
+        "equation": "numbers = [2, 3, 9]\nk = 3\nceil = 10**k\nfloor = 10**(k-1)\ncount = 0\nfor i in range(floor, ceil):\n    divided = True\n    for d in numbers:\n        if i % d != 0:\n            divided = False\n    if divided:\n        count += 1\nprint(count)"
+    },
+    "14": {
+        "answer": "3",
+        "equation": "n = 2\nprint((n + 1) * (n - 1))"
+    },
+    "15": {
+        "answer": "63",
+        "equation": "n = 8\nprint((n + 1) * (n - 1))"
+    },
+    "16": {
+        "answer": "",
+        "equation": ""
+    },
+    "17": {
+        "answer": "35",
+        "equation": "n1 = 36\nn2 = 63\nn3 = 8\nn = n3 + n2\nprint(n - n1)"
+    },
+    "18": {
+        "answer": "",
+        "equation": ""
+    },
+    "19": {
+        "answer": "32",
+        "equation": "n1 = 46\nn2 = 15\nn3 = 29\nn = n1 + n2\nprint(n - n3)"
+    },
+    "20": {
+        "answer": "16",
+        "equation": "n1 = 2\nn2 = 5\nn3 = 40\nn = n3 / n2\nprint(int(n * n1))"
+    },
+    "21": {
+        "answer": "240",
+        "equation": "series = [1, 17, 33, 49, 65]\nn1 = 25\nn2 = 40\nN = len(series)\nseries0 = []\nfor i in range(N - 1):\n    series0.append(series[i+1] - series[i])\nN = len(series0)\nseries1 = []\nfor i in range(N - 1):\n    series1.append(series0[i+1] - series0[i])\nN = len(series1)\nseries2 = []\nfor i in range(N - 1):\n    series2.append(series1[i+1] - series1[i])\nif max(series0) == min(series0):\n    order = 0\nelif max(series1) == min(series1):\n    order = 1\nelif max(series2) == min(series2):\n    order = 2\nelse:\n    order = None    \nn = max(n1, n2)    \nif order == 0:\n    _series0 = [series0[0]] * n\n    _series = [series[0]]\n    for i in range(n):\n        _series.append(_series[-1] + _series0[i])\nif order == 1:\n    _series1 = [series1[0]] * n\n    _series0 = [series0[0]]\n    for i in range(n):\n        _series0.append(_series0[-1] + _series1[i])\n    _series = [series[0]]\n    for i in range(n+1):\n        _series.append(_series[-1] + _series0[i])\nif order == 2:\n    _series2 = [series2[0]] * n\n    _series1 = [series1[0]]\n    for i in range(n):\n        _series1.append(_series1[-1] + _series2[i])\n    _series0 = [series0[0]]\n    for i in range(n+1):\n        _series0.append(_series0[-1] + _series1[i])\n    _series = [series[0]]\n    for i in range(n+2):\n        _series.append(_series[-1] + _series0[i])\nprint(_series[n2 - 1] - _series[n1 - 1])"
+    },
+    "22": {
+        "answer": "",
+        "equation": ""
+    },
+    "23": {
+        "answer": "285",
+        "equation": "series = [1, 5, 14, 30, 55, 91]\nn = 9\nN = len(series)\nseries0 = []\nfor i in range(N - 1):\n    series0.append(series[i+1] - series[i])\nN = len(series0)\nseries1 = []\nfor i in range(N - 1):\n    series1.append(series0[i+1] - series0[i])\nN = len(series1)\nseries2 = []\nfor i in range(N - 1):\n    series2.append(series1[i+1] - series1[i])\nif max(series0) == min(series0):\n    order = 0\nelif max(series1) == min(series1):\n    order = 1\nelif max(series2) == min(series2):\n    order = 2\nelse:\n    order = None\n    \nif order == 0:\n    _series0 = [series0[0]] * n\n    _series = [series[0]]\n    for i in range(n):\n        _series.append(_series[-1] + _series0[i])\nif order == 1:\n    _series1 = [series1[0]] * n\n    _series0 = [series0[0]]\n    for i in range(n):\n        _series0.append(_series0[-1] + _series1[i])\n    _series = [series[0]]\n    for i in range(n+1):\n        _series.append(_series[-1] + _series0[i])\nif order == 2:\n    _series2 = [series2[0]] * n\n    _series1 = [series1[0]]\n    for i in range(n):\n        _series1.append(_series1[-1] + _series2[i])\n    _series0 = [series0[0]]\n    for i in range(n+1):\n        _series0.append(_series0[-1] + _series1[i])\n    _series = [series[0]]\n    for i in range(n+2):\n        _series.append(_series[-1] + _series0[i])\nprint(_series[n - 1])"
+    },
+    "24": {
+        "answer": "1",
+        "equation": "series = [1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7]\nk = 57\nN = len(series)\nif k <= N:\n    print(series[k-1])\nelse:\n    for n in range(1, N + 1):\n        repeat = int(N // n)\n        rest = N % n\n        reseries = series[:n] * repeat + series[:rest]\n        if series == reseries:\n            j = k % n\n            break\n    print(series[j-1])"
+    },
+    "25": {
+        "answer": "빨간색",
+        "equation": "colors = [' 흰색 ', ' 노란색 ', ' 빨간색 ']\nns = [1, 2, 3]\nk = 58\nN = sum(ns)\nseries = []\nfor i, c in enumerate(colors):\n    series += [c] * ns[i] \nif k <= N:\n    print(series[k-1])\nelse:\n    for n in range(1, N + 1):\n        repeat = int(N // n)\n        rest = N % n\n        reseries = series[:n] * repeat + series[:rest]\n        if series == reseries:\n            j = k % n\n            break\n    print(series[j-1])"
+    },
+    "26": {
+        "answer": "태형",
+        "equation": "people = ['태형', '남준', '윤기']\nk = 91\nn = 2\nN = n * len(people)\nseries = []\nfor i, p in enumerate(people):\n    series += n * [p]\nif k <= N:\n    print(series[k-1])\nelse:\n    for n in range(1, N + 1):\n        repeat = int(N // n)\n        rest = N % n\n        reseries = series[:n] * repeat + series[:rest]\n        if series == reseries:\n            j = k % n\n            break\n    print(series[j-1])"
+    },
+    "27": {
+        "answer": "지민",
+        "equation": "numbers = [4, 4, 3, 6]\np1 = '정국'\np2 = ' 지민'\nn1, n2, n3, n4 = numbers\nif n1 + n2 >= n3 + n4:\n    print(p1)\nelse:\n    print(p2)"
+    },
+    "28": {
+        "answer": "(가)",
+        "equation": "names = ['(가)', '(나)', '(다)', '(라)']\nn1, n2, n3, n4 = names\nprint(n1)"
+    },
+    "29": {
+        "answer": "3",
+        "equation": "numbers = [1.4, 0.9, 1.1, 0.5, 1.3]\nth = 0.9\ncount = 0\nfor n in numbers:\n    if n > th:\n        count += 1\nprint(count)"
+    }
+}

@@ -1,0 +1,74 @@
+---------------------- hp -------------------
+__module__ : pkg.trainer
+steps_log : 10
+steps_eval : 50
+steps_save : 10000
+save_model_only : True
+max_lr : 0.001
+base_lr : 0.001
+lr_decay_factor : 0.99
+lr_patience : 300
+scheduler_mode : triangular2
+step_size_up : 10
+ema : 0.99
+max_grad_norm : 10.0
+adam_alpha : 0.0002
+adam_betas : (0.5, 0.9)
+adam_eps : 1e-06
+weight_decay : 1e-06
+__dict__ : <attribute '__dict__' of 'Hyper' objects>
+__weakref__ : <attribute '__weakref__' of 'Hyper' objects>
+__doc__ : None
+add_bos : False
+add_eos : False
+batch_size : None
+batch_type : normal
+ds_batch_size : 256
+num_workers : 2
+initial_lr : 0.0001
+final_lr : 1e-05
+grad_norm_max : 10.0
+vocab_size : 512
+add_space_token : False
+num_problems : 44
+problems : [<class 'problems.P1_1_1'>, <class 'problems.P1_1_2'>, <class 'problems.P1_1_3'>, <class 'problems.P1_1_4'>, <class 'problems.P1_1_5'>, <class 'problems.P1_1_6'>, <class 'problems.P1_1_7'>, <class 'problems.P1_1_8'>, <class 'problems.P1_1_9'>, <class 'problems.P1_1_10'>, <class 'problems.P1_1_11'>, <class 'problems.P1_1_12'>, <class 'problems.P1_2_1'>, <class 'problems.P1_2_2'>, <class 'problems.P1_3_1'>, <class 'problems.P1_4_1'>, <class 'problems.P2_1_1'>, <class 'problems.P2_2_2'>, <class 'problems.P2_3_1'>, <class 'problems.P3_1_1'>, <class 'problems.P3_2_1'>, <class 'problems.P3_2_2'>, <class 'problems.P3_3_1'>, <class 'problems.P4_1_1'>, <class 'problems.P4_2_1'>, <class 'problems.P4_2_2'>, <class 'problems.P4_3_1'>, <class 'problems.P5_1_1'>, <class 'problems.P5_2_1'>, <class 'problems.P5_3_1'>, <class 'problems.P6_1_1'>, <class 'problems.P6_3_1'>, <class 'problems.P6_4_1'>, <class 'problems.P7_1_1'>, <class 'problems.P7_1_2'>, <class 'problems.P7_3_1'>, <class 'problems.P8_1_1'>, <class 'problems.P8_2_1'>, <class 'problems.P8_3_1'>, <class 'problems.P9_1_1'>, <class 'problems.P9_2_1'>, <class 'problems.P9_2_2'>, <class 'problems.P9_3_1'>, <class 'problems.P9_3_2'>]
+--------------------- model cfg -------------------
+************** model0****************
+cls : <class 'pkg.models.model.QuestionClassifier'>
+text_embed : 
+    cls : <class 'pkg.models.embedding.Embed'>
+    num_symbols : 512
+    embedding_dim : 256
+    num_upsample : 1
+    padding_idx : None
+encoders : 
+    cls : <class 'pkg.models.config.ConfigList'>
+    0 : 
+        cls : <class 'pkg.models.encoders_conv.HighwayEncoder'>
+        in_dim : 256
+        out_dim : 256
+        kernel_size : 3
+        stride : 1
+        num_blocks : 1
+        num_layers : 5
+        dilation_base : 1
+        dilation_power : 1
+        dropout_rate : 0.5
+        padding : same
+        groups : 1
+        bias : True
+        normalization : batch
+extractor : 
+    cls : <class 'pkg.models.extractor.RNNExtractor'>
+    in_dim : 256
+    out_dim : 1024
+    num_layers : 1
+    rnn : gru
+    bidirectional : True
+regressor : 
+    cls : <class 'pkg.models.embedding.Regressor'>
+    num_symbols : 44
+    embedding_dim : 1024
+    hidden_dims : 
+        cls : <class 'pkg.models.config.ConfigList'>
+    external_embed : None
